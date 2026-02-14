@@ -24,27 +24,25 @@ const HTMLFlipBook = dynamic(() => import("react-pageflip"), {
 
 export default function FlipBook() {
   const flipProps = {
-    width: 500,
-    height: 700,
+    width: 300,
+    height: 500,
     size: "stretch",
-    minWidth: 315,
-    maxWidth: 1000,
+    minWidth: 600,
+    maxWidth: 2000,
     minHeight: 400,
-    maxHeight: 1536,
+    maxHeight: 2000,
     startPage: 0,
     drawShadow: true,
-    flippingTime: 1000,
-    usePortrait: true,
-    startZIndex: 0,
+    flippingTime: 800,
+    usePortrait: false, // 🔥 important
     autoSize: true,
-    maxShadowOpacity: 0.5,
     showCover: true,
     mobileScrollSupport: true,
     style: {},
   };
   return (
     <div className="flex justify-center py-10">
-      <HTMLFlipBook width={600} height={800}>
+      <HTMLFlipBook width={300} height={500}>
         {pages.map((src, index) => (
           <div key={index} className="bg-white">
             <img
