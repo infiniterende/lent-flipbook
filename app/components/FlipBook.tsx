@@ -42,7 +42,7 @@ export default function FlipBook() {
   };
   return (
     <div className="flex justify-center py-10">
-      <HTMLFlipBook width={300} height={500}>
+      <HTMLFlipBook width={300} height={500} usePortrait={false}>
         {pages.map((src, index) => (
           <div key={index} className="bg-white">
             <img
